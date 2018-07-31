@@ -1,0 +1,6 @@
+com\sy\platform\common\persistence\annotation\MybatisDao.class
+com\sy\platform\common\persistence\listener\WebContextListener.class
+com\sy\platform\moudles\cms\entity\Article.class
+com\sy\platform\moudles\cms\web\ArticleCrtl.class
+com\sy\platform\moudles\cms\mapper\ArticleMapper.class
+com\sy\platform\moudles\cms\service\ArticleService.class

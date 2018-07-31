@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sy.platform.moudles.cms.mapper.ArticleMapper">
+  <resultMap id="BaseResultMap" type="com.sy.platform.moudles.cms.entity.Article">
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="category_id" jdbcType="VARCHAR" property="categoryId" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="link" jdbcType="VARCHAR" property="link" />
+    <result column="color" jdbcType="VARCHAR" property="color" />
+    <result column="image" jdbcType="VARCHAR" property="image" />
+    <result column="keywords" jdbcType="VARCHAR" property="keywords" />
+    <result column="description" jdbcType="VARCHAR" property="description" />
+    <result column="weight" jdbcType="INTEGER" property="weight" />
+    <result column="weight_date" jdbcType="TIMESTAMP" property="weightDate" />
+    <result column="hits" jdbcType="INTEGER" property="hits" />
+    <result column="posid" jdbcType="VARCHAR" property="posid" />
+    <result column="custom_content_view" jdbcType="VARCHAR" property="customContentView" />
+    <result column="create_by" jdbcType="VARCHAR" property="createBy" />
+    <result column="create_date" jdbcType="TIMESTAMP" property="createDate" />
+    <result column="update_by" jdbcType="VARCHAR" property="updateBy" />
+    <result column="update_date" jdbcType="TIMESTAMP" property="updateDate" />
+    <result column="remarks" jdbcType="VARCHAR" property="remarks" />
+    <result column="del_flag" jdbcType="CHAR" property="delFlag" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.sy.platform.moudles.cms.entity.Article">
+    <result column="view_config" jdbcType="LONGVARCHAR" property="viewConfig" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, category_id, title, link, color, image, keywords, description, weight, weight_date, 
+    hits, posid, custom_content_view, create_by, create_date, update_by, update_date, 
+    remarks, del_flag
+  </sql>
+  <sql id="Blob_Column_List">
+    view_config
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="ResultMapWithBLOBs">
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from cms_article
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from cms_article
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.sy.platform.moudles.cms.entity.Article">
+    insert into cms_article (id, category_id, title, 
+      link, color, image, 
+      keywords, description, weight, 
+      weight_date, hits, posid, 
+      custom_content_view, create_by, create_date, 
+      update_by, update_date, remarks, 
+      del_flag, view_config)
+    values (#{id,jdbcType=VARCHAR}, #{categoryId,jdbcType=VARCHAR}, #{title,jdbcType=VARCHAR}, 
+      #{link,jdbcType=VARCHAR}, #{color,jdbcType=VARCHAR}, #{image,jdbcType=VARCHAR}, 
+      #{keywords,jdbcType=VARCHAR}, #{description,jdbcType=VARCHAR}, #{weight,jdbcType=INTEGER}, 
+      #{weightDate,jdbcType=TIMESTAMP}, #{hits,jdbcType=INTEGER}, #{posid,jdbcType=VARCHAR}, 
+      #{customContentView,jdbcType=VARCHAR}, #{createBy,jdbcType=VARCHAR}, #{createDate,jdbcType=TIMESTAMP}, 
+      #{updateBy,jdbcType=VARCHAR}, #{updateDate,jdbcType=TIMESTAMP}, #{remarks,jdbcType=VARCHAR}, 
+      #{delFlag,jdbcType=CHAR}, #{viewConfig,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.sy.platform.moudles.cms.entity.Article">
+    insert into cms_article
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="categoryId != null">
+        category_id,
+      </if>
+      <if test="title != null">
+        title,
+      </if>
+      <if test="link != null">
+        link,
+      </if>
+      <if test="color != null">
+        color,
+      </if>
+      <if test="image != null">
+        image,
+      </if>
+      <if test="keywords != null">
+        keywords,
+      </if>
+      <if test="description != null">
+        description,
+      </if>
+      <if test="weight != null">
+        weight,
+      </if>
+      <if test="weightDate != null">
+        weight_date,
+      </if>
+      <if test="hits != null">
+        hits,
+      </if>
+      <if test="posid != null">
+        posid,
+      </if>
+      <if test="customContentView != null">
+        custom_content_view,
+      </if>
+      <if test="createBy != null">
+        create_by,
+      </if>
+      <if test="createDate != null">
+        create_date,
+      </if>
+      <if test="updateBy != null">
+        update_by,
+      </if>
+      <if test="updateDate != null">
+        update_date,
+      </if>
+      <if test="remarks != null">
+        remarks,
+      </if>
+      <if test="delFlag != null">
+        del_flag,
+      </if>
+      <if test="viewConfig != null">
+        view_config,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="categoryId != null">
+        #{categoryId,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null">
+        #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="link != null">
+        #{link,jdbcType=VARCHAR},
+      </if>
+      <if test="color != null">
+        #{color,jdbcType=VARCHAR},
+      </if>
+      <if test="image != null">
+        #{image,jdbcType=VARCHAR},
+      </if>
+      <if test="keywords != null">
+        #{keywords,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null">
+        #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="weight != null">
+        #{weight,jdbcType=INTEGER},
+      </if>
+      <if test="weightDate != null">
+        #{weightDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="hits != null">
+        #{hits,jdbcType=INTEGER},
+      </if>
+      <if test="posid != null">
+        #{posid,jdbcType=VARCHAR},
+      </if>
+      <if test="customContentView != null">
+        #{customContentView,jdbcType=VARCHAR},
+      </if>
+      <if test="createBy != null">
+        #{createBy,jdbcType=VARCHAR},
+      </if>
+      <if test="createDate != null">
+        #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateBy != null">
+        #{updateBy,jdbcType=VARCHAR},
+      </if>
+      <if test="updateDate != null">
+        #{updateDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="remarks != null">
+        #{remarks,jdbcType=VARCHAR},
+      </if>
+      <if test="delFlag != null">
+        #{delFlag,jdbcType=CHAR},
+      </if>
+      <if test="viewConfig != null">
+        #{viewConfig,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.sy.platform.moudles.cms.entity.Article">
+    update cms_article
+    <set>
+      <if test="categoryId != null">
+        category_id = #{categoryId,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null">
+        title = #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="link != null">
+        link = #{link,jdbcType=VARCHAR},
+      </if>
+      <if test="color != null">
+        color = #{color,jdbcType=VARCHAR},
+      </if>
+      <if test="image != null">
+        image = #{image,jdbcType=VARCHAR},
+      </if>
+      <if test="keywords != null">
+        keywords = #{keywords,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null">
+        description = #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="weight != null">
+        weight = #{weight,jdbcType=INTEGER},
+      </if>
+      <if test="weightDate != null">
+        weight_date = #{weightDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="hits != null">
+        hits = #{hits,jdbcType=INTEGER},
+      </if>
+      <if test="posid != null">
+        posid = #{posid,jdbcType=VARCHAR},
+      </if>
+      <if test="customContentView != null">
+        custom_content_view = #{customContentView,jdbcType=VARCHAR},
+      </if>
+      <if test="createBy != null">
+        create_by = #{createBy,jdbcType=VARCHAR},
+      </if>
+      <if test="createDate != null">
+        create_date = #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateBy != null">
+        update_by = #{updateBy,jdbcType=VARCHAR},
+      </if>
+      <if test="updateDate != null">
+        update_date = #{updateDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="remarks != null">
+        remarks = #{remarks,jdbcType=VARCHAR},
+      </if>
+      <if test="delFlag != null">
+        del_flag = #{delFlag,jdbcType=CHAR},
+      </if>
+      <if test="viewConfig != null">
+        view_config = #{viewConfig,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.sy.platform.moudles.cms.entity.Article">
+    update cms_article
+    set category_id = #{categoryId,jdbcType=VARCHAR},
+      title = #{title,jdbcType=VARCHAR},
+      link = #{link,jdbcType=VARCHAR},
+      color = #{color,jdbcType=VARCHAR},
+      image = #{image,jdbcType=VARCHAR},
+      keywords = #{keywords,jdbcType=VARCHAR},
+      description = #{description,jdbcType=VARCHAR},
+      weight = #{weight,jdbcType=INTEGER},
+      weight_date = #{weightDate,jdbcType=TIMESTAMP},
+      hits = #{hits,jdbcType=INTEGER},
+      posid = #{posid,jdbcType=VARCHAR},
+      custom_content_view = #{customContentView,jdbcType=VARCHAR},
+      create_by = #{createBy,jdbcType=VARCHAR},
+      create_date = #{createDate,jdbcType=TIMESTAMP},
+      update_by = #{updateBy,jdbcType=VARCHAR},
+      update_date = #{updateDate,jdbcType=TIMESTAMP},
+      remarks = #{remarks,jdbcType=VARCHAR},
+      del_flag = #{delFlag,jdbcType=CHAR},
+      view_config = #{viewConfig,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.sy.platform.moudles.cms.entity.Article">
+    update cms_article
+    set category_id = #{categoryId,jdbcType=VARCHAR},
+      title = #{title,jdbcType=VARCHAR},
+      link = #{link,jdbcType=VARCHAR},
+      color = #{color,jdbcType=VARCHAR},
+      image = #{image,jdbcType=VARCHAR},
+      keywords = #{keywords,jdbcType=VARCHAR},
+      description = #{description,jdbcType=VARCHAR},
+      weight = #{weight,jdbcType=INTEGER},
+      weight_date = #{weightDate,jdbcType=TIMESTAMP},
+      hits = #{hits,jdbcType=INTEGER},
+      posid = #{posid,jdbcType=VARCHAR},
+      custom_content_view = #{customContentView,jdbcType=VARCHAR},
+      create_by = #{createBy,jdbcType=VARCHAR},
+      create_date = #{createDate,jdbcType=TIMESTAMP},
+      update_by = #{updateBy,jdbcType=VARCHAR},
+      update_date = #{updateDate,jdbcType=TIMESTAMP},
+      remarks = #{remarks,jdbcType=VARCHAR},
+      del_flag = #{delFlag,jdbcType=CHAR}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+
+
+</mapper>

@@ -1,0 +1,42 @@
+ <div class="page-footer">
+    <ul class="pagination">
+      <li><a href="#">&laquo;</a></li>
+      <li><a href="#">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#">4</a></li>
+      <li><a href="#">...</a></li>
+      <li><a href="#">&raquo;</a></li>
+    </ul>
+  </div>
+
+  <!-- 文章列表 end -->
+  
+
+<div class="container">
+  <div class="row clearfix">
+    <div class="col-md-12 column">
+      <div id="footer">
+        <div class="footerNav text-center">
+           <a rel="nofollow" href="http://www.layoutit.cn">关于我们</a> | <a rel="nofollow" href="http://www.layoutit.cn">服务条款</a> | <a rel="nofollow" href="http://www.layoutit.cn">免责声明</a> | <a rel="nofollow" href="http://www.layoutit.cn">网站地图</a> | <a rel="nofollow" href="http://www.layoutit.cn">联系我们</a>
+        </div>
+        <div class="copyRight text-center">
+          Copyright ©2010-2014layoutit.cn 版权所有
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+ 
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>

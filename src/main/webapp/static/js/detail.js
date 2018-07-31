@@ -1,0 +1,7 @@
+(function(){
+   getArticleDetail();
+})();
+
+function getArticleDetail(){
+	
+}

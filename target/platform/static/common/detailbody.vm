@@ -1,0 +1,109 @@
+
+  <!-- 内容 start -->
+  <div class="container" id="detail-content">
+    <div class="row">
+      <div class="col-lg-7 col-lg-offset-2">
+        <p id="content-tittle">
+          <h3 class="detail-tittle"> ${article.tittle} </h3>
+          <small>发布于 <span class="post-time">2017-02-25</span> / <span class="category-name">默认分类</span> / <span class="comment-num">73</span> 条评论 / <span class="looks-num">55766</span>浏览</small>
+        </p><hr>
+        <p>${article.content}</p>
+      </div><hr>
+        <p id="tips">本文由 biezhi 创作，采用 知识共享署名4.0 国际许可协议进行许可
+本站文章除注明转载/出处外，均为本站原创或翻译，转载前请务必署名
+<br>最后编辑时间为: <span class="post-time">2017/09/28 23:34</span></p>
+
+      </div>
+      <div class="col-lg-2">
+        <div id="quick-position">
+          <a href="#"><p>一.2014总结</p></a>
+          <a href="#"><p>1.1 技术</p></a>
+          <a href="#"><p>1.2 生活</p></a>
+          <a href="#"><p>1.3 展望</p></a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- 内容 end -->
+
+  <div class="comments-area">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7 col-lg-offset-2">
+          <div class="comment-form">
+            <form class="" role="form">
+                <div class="info">
+                  <input type="text" name="name" placeholder="姓名(*)">
+                  <input type="text" name="email" placeholder="邮箱(*)">
+                  <input type="text" name="nickname" placeholder="昵称(*)">
+                </div>
+                <textarea id="commonts-textarea" name="comment" placeholder="基佬,请留下你的评论"></textarea>
+                <button class="btn btn-default pull-right">提交</button>
+            </form>
+          </div>
+          <ol class="comment-list">
+              <li>
+                <div class="comment-body">
+                  <div class="comment-header">
+                    <img src="/myblog/static/image/4.jpg" title="FF" width="80" height="80"> 
+                    <span class="comment-author"><a href="#" target="_blank">FF</a></span>
+                  </div><br>
+                  <div class="comment-content">
+                    <p>这是测试的评论</p>
+                  </div>
+                  <div class="comment-meta">
+                    <time>2018-03-27</time>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="comment-body">
+                  <div class="comment-header">
+                    <img src="/myblog/static/image/4.jpg" title="FF" width="80" height="80"> 
+                    <span class="comment-author"><a href="#" target="_blank">FF</a></span>
+                  </div><br>
+                  <div class="comment-content">
+                    <p>这是测试的评论</p>
+                  </div>
+                  <div class="comment-meta">
+                    <time>2018-03-27</time>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="comment-body">
+                  <div class="comment-header">
+                    <img src="/myblog/static/image/4.jpg" title="FF" width="80" height="80"> 
+                    <span class="comment-author"><a href="#" target="_blank">FF</a></span>
+                  </div><br>
+                  <div class="comment-content">
+                    <p>这是测试的评论</p>
+                  </div>
+                  <div class="comment-meta">
+                    <time>2018-03-27</time>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="comment-body">
+                  <div class="comment-header">
+                    <img src="/myblog/static/image/4.jpg" title="FF" width="80" height="80"> 
+                    <span class="comment-author"><a href="#" target="_blank">FF</a></span>
+                  </div><br>
+                  <div class="comment-content">
+                    <p>这是测试的评论</p>
+                  </div>
+                  <div class="comment-meta">
+                    <time>2018-03-27</time>
+                  </div>
+                </div>
+              </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+<script type="text/javascript" src="/myblog/static/js/detail.js"></script>
