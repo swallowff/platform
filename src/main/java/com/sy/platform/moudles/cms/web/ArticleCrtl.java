@@ -29,11 +29,11 @@ public class ArticleCrtl {
 
     @RequestMapping(value = "index")
     private String index(ModelAndView model){
-        List<Article> articleList = new ArrayList<>();
-        Article article = articleService.get("1");
-        articleList.add(article);
-        model.addObject("articleList",articleList);
-        logger.debug(articleList.get(0).toString());
+//        List<Article> articleList = new ArrayList<>();
+//        Article article = articleService.get("1");
+//        articleList.add(article);
+//        model.addObject("articleList",articleList);
+//        logger.debug(articleList.get(0).toString());
         return "index";
     }
 
