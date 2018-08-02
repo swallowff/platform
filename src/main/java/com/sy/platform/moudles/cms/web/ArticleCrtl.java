@@ -1,18 +1,12 @@
 package com.sy.platform.moudles.cms.web;
 
-import com.sy.platform.moudles.cms.entity.Article;
 import com.sy.platform.moudles.cms.service.ArticleService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * @author Lenovo
@@ -34,49 +28,61 @@ public class ArticleCrtl {
 //        articleList.add(article);
 //        model.addObject("articleList",articleList);
 //        logger.debug(articleList.get(0).toString());
-        return "index";
+        return "moudles/cms/index";
     }
 
     @RequestMapping(value = "blank")
     private String blank(){
 
-        return "blank";
+        return "moudles/cms/blank";
     }
 
     @RequestMapping(value = "cards")
     private String cards(){
 
-        return "cards";
+        return "moudles/cms/cards";
     }
 
     @RequestMapping(value = "charts")
     private String charts(){
 
-        return "charts";
+        return "moudles/cms/charts";
     }
 
     @RequestMapping(value = "login")
     private String login(){
 
-        return "login";
+        return "moudles/cms/login";
     }
 
     @RequestMapping(value = "navbar")
     private String navbar(){
 
-        return "navbar";
+        return "moudles/cms/navbar";
     }
 
     @RequestMapping(value = "register")
     private String register(){
 
-        return "register";
+        return "moudles/cms/register";
     }
 
     @RequestMapping(value = "tables")
     private String tables(){
 
-        return "tables";
+        return "moudles/cms/tables";
+    }
+
+    @RequestMapping(value = "forgotpassword")
+    private String forgotpassword(){
+
+        return "moudles/cms/forgotpassword";
+    }
+
+    @RequestMapping(value = "default")
+    private String testdefault(){
+
+        return "template/default";
     }
 
 }

@@ -81,7 +81,7 @@
 
 	<!-- 配置vm视图解析器 -->
 	<bean id="velocityConfigurer" class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
-		<property name="resourceLoaderPath" value="/WEB-INF/views/test"></property>
+		<property name="resourceLoaderPath" value="/WEB-INF/views/"></property>
 		<property name="velocityProperties">
 			<props>
 				<prop key="input.encoding">utf-8</prop>
@@ -92,6 +92,24 @@
 			</props>
 		</property>
 	</bean>
+	<!--<bean id= "viewResolver"-->
+		  <!--class= "org.springframework.web.servlet.view.velocity.VelocityLayoutViewResolver">-->
+		<!--<property name= "cache" value= "true"/>-->
+		<!--<property name= "prefix" value= "/"/>-->
+		<!--<property name= "suffix" value= ".vm"/>-->
+		<!--<property name= "contentType">-->
+			<!--<value>text/html;charset=utf-8</value>-->
+		<!--</property>-->
+		<!--<property name="toolboxConfigLocation">-->
+			<!--<value>/WEB-INF/toolbox.xml</value>-->
+		<!--</property>-->
+		<!--<property name="layoutUrl" value="WEB-INF/layout.vm" />-->
+		<!--<property name="allowSessionOverride" value="true"/>-->
+		<!--<property name="allowRequestOverride" value="true"/>-->
+		<!--<property name="exposeSessionAttributes" value="true"/>-->
+		<!--<property name="requestContextAttribute" value="rc"/>-->
+		<!--<property name="exposeRequestAttributes" value="true"/>-->
+	<!--</bean>-->
 	<bean id="velocityViewResolver" class="org.springframework.web.servlet.view.velocity.VelocityViewResolver">
 		<property name="order" value="0"></property>
 		<property name="suffix" value=".vm"></property>

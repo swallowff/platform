@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+#include("./include/head.vm")<br>
+</head>
+<body>
+    <h1>测试模板</h1>
+
+
+#include("./include/foot.vm")<br>
+</body>
+
+</html>
